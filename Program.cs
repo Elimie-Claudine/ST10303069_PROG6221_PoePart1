@@ -86,8 +86,7 @@ namespace ST10303069_PoePart1_PROG6221
 
                 if (input.Contains("exit"))
                 {
-                    TypeEffect("Thank you for reaching out. Goodbye!", ConsoleColor.Magenta);
-                    break;
+                  
                 }
                 Responses(input);
 
@@ -129,24 +128,7 @@ namespace ST10303069_PoePart1_PROG6221
             }
         }
 
-        static void TypeEffect(string text, ConsoleColor color = ConsoleColor.White, int delay = 25)
-        {
-            Console.ForegroundColor = color;
-            foreach (char c in text)
-            {
-                Console.Write(c);
-                System.Threading.Thread.Sleep(delay);
-            }
-            Console.WriteLine();
-            Console.ResetColor();
-        }
-
-        static void ColoredText(string text, ConsoleColor color)
-        {
-            Console.ForegroundColor = color;
-            Console.WriteLine(text);
-            Console.ResetColor();
-        }
+        
 
     }
 }
